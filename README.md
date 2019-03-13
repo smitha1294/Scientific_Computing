@@ -7,13 +7,13 @@ but we’re going to pretend we don’t know them (See the Wikipedia page on the
 Monte Carlo Integration:
 
 In this method, I have surrounded the hypersphere with the smallest hypercube that can enclose it.
-This hypercube is centered at the origin with sides of length 2 and has a volume of 2d
-. I have then
+This hypercube is centered at the origin with sides of length 2 and has a volume of 2^d. I have then
 selected N points at random inside the hypercube. I used Rejection algorithm to determine the count
 of points that are inside the hypersphere. I do this by generating 2D matrix N*d size with random
-numbers in range [-1,1] and checking if sum of the squares row wise is <=1.
+numbers in range [-1,1] and checking if sum of the squares row wise is <=1. The volume of the hypersphere is then
+(N-points inside / N-points in total) * 2^d.
 
 Cube Based Integration:
 
 In this method, I have divided each of the d dimensions into K segments, so that the side of
-the smaller is of length 2/k. The volume of smaller hypercube is (2/k)d.
+the smaller is of length 2/k. The volume of smaller hypercube is (2/k)^d.
